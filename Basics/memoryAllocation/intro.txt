@@ -1,0 +1,42 @@
+MEMORY ALLOCATION IN C++
+
+every program has data(in form of variables, data structures)
+
+1) Static memory allocation (compile time allocation)
+
+int main() {
+    int a;      => 4 bytes
+    char ch;    => 1 byte
+    int arr[10];    => 4*100 = 400 bytes
+}
+
+these variables are stored inside RAM,
+its called compile time because sizes and locations of variables are fixed during compile time
+compiler makes a symbol table for all variables containing variable names and their locations(virtual address)
+now on runtime that virtual addresses are mapped with physical addresses present in RAM
+
+Advantages:
+    quite faster than the dynamic allocation
+Disadvantages:
+    less flexible, sizes are to be fixed before compiling
+
+2) Dynamic memory allocation (runtime memory allocation)
+
+allows us to define memory size during execution of the program
+it uses the special part of memory called "heap" memory
+generally heap part of memory is bigger than the static part of memory
+heap memory is reusable, we can create an array and during execution delete it too and create another array in that space
+we use two keywords for this purpose, "new" and "delete"
+new => allocates memory
+delete => frees the memory
+
+int main() {
+
+}
+
+new int;  // this statement will allocate some memory in heap and return the address of that
+to store that address, we need a pointer variable thus => int *x = new int;
+eg: int *a = new int [100000];
+here pointer variable will be created inside static memory but the array of size 100000 will be in heap memory
+while re assigning a pointer to a new memory, previous memory must be destroyed to avoid memory leak
+eg:   delete [] a;

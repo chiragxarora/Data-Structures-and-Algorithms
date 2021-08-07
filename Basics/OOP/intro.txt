@@ -1,0 +1,58 @@
+Till now we have done functional programming, but for a system with a lot of entities, functional programming is not a good choice
+In that case we use Object Oriented Programming
+
+Class => A derived data type with functions
+Object => Variable of a Class
+
+Class is just a blueprint (a piece of code telling hwat would an object look like) and it doesnt exist in the memory
+When an object is created, it gets all the members with the help of the blueprint (class)
+
+eg : int a;  => here int could be a class and a a Variable!
+     student s;
+
+By using OOP, we can design softwares and school management system very easily which would be a tough task if done via functional programming
+
+we can have classes like this
+
+class student {
+    variables : name, phone, address, gender, subjects, marks;
+    methods: getName(), setName(), getAverageMarks(), GetResult()
+}
+
+and now we can have a simple object to this class which will have access to all the members and methods
+
+student s;
+
+A class has a function with the name same as the name of class => constructor()
+
+A constructor is used to initialize the data members of the class!
+Cnstructor is called whenever a new object to the class is initialised!
+
+data members can be private, protected, public
+
+private => these members can only be accessed via functions inside the class! They are not visible outside the class!
+
+use of private is to protect the data
+
+ABSTRACTION : Hiding internal working of the class and showing only public details to the outside enviornment!
+
+ENCAPSULATION : Bundling all the connected/related entities and their properties together! (basicaly idea of using class is encapsulation)
+
+POLYMORPHISM : One name and different functionalities depending upon parameters (this is static polymorphism)
+
+INHERITANCE : Avoiding writting same code again and again, we can have one parent class with all the basic functions and derive other child classes from that
+eg : Person is parent class, Student, Teacher are child classes
+
+When we access data members from an object then we use dot (.) operator, d.name;
+When we access data members or functions from a pointer, then we use arrow (->) operator d->name
+
+Complex c = new Complex(5,4);
+c->real will be 5;
+c->img will be 4;
+
+Initializer List with constructors!!
+
+There is a second way of initialization called initializer list and we should prefer it whenever possible!
+Reasons : Performance! this way initialization is done only once!
+with using constructor, first default value is set and then parameterised!
+

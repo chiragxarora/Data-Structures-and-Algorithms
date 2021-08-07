@@ -1,0 +1,13 @@
+A linked list is similar to an array but comes with a few advantages over arrays!
+Its a linear data structure just like arrays!
+LL => A collection of nodes which store some data!
+Advantages : 
+Memory need not be contigous in case of linked list, nodes of LL can be present anywhere in memory and still be connected
+Insertions, deletions at random positions is not a costly operation like in arrays!
+Implementation of other ds like stack, queue is much easier with linkedlist
+
+LinkedList is a linear connection of nodes, in which each node contains two things,
+ -> node value (current node value)
+ -> next (pointer to the address of next node)
+
+A ll as whole has 2 pointers, a head and a tail, head is the address of starting location, tail is the address of ending location
